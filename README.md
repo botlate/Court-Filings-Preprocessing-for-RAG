@@ -1,10 +1,18 @@
 # Legal Document Pipeline (Visual Walkthrough)
 
+bunch of text here
+</p>
+</p>
 <p align="center">
   <img src="images/pdf_split.png" width="80%">
   <br>
   <i>1. A PDF is decomposed into individual pages.</i>
 </p>
+</p>
+bunch of text here
+</p>
+</p>
+
 
 <p align="center">
   <img src="images/classification_basic3.png" width="80%">

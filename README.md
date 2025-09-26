@@ -47,7 +47,7 @@ bunch of text here
   <i>4. A structured spreadsheet output is generated.</i>
 
 <p align="center">
-  <img src="images/workflow.png" width="80%">
+  <img src="images/page_0000_caption.png" width="80%">
   <br>
   <i>5. The pipeline continues: TOC parsing, indexing, retrieval.</i>
 </p>

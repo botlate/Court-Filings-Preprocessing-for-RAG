@@ -27,9 +27,21 @@ bunch of text here
 </p>
 
 <p align="center">
-  <img src="images/2001 01 01 Def Motion_classification.csv" width="80%">
-  <br>
   <i>4. A structured spreadsheet output is generated.</i>
+</p>
+
+| Filename | Category | Exhibit Label | Exhibit Title | Notes | Footnote | Block Quote |
+|----------|----------|---------------|---------------|-------|----------|-------------|
+| page_0001.png | Pleading first page | | | page_0001_caption.txt | | |
+| page_0002.png | Table of Contents | | | page_0002_TOC.txt | | |
+| page_0003.png | Pleading body | | | | Y | |
+| page_0004.png | Pleading body | | | | | Y |
+| page_0005.png | Exhibit cover page | A | Dismissal Letter | | | |
+| page_0007.png | Exhibit content | A | | | | |
+| page_0008.png | Proof of service page | | | | | |
+
+<p align="center">
+  <em>Classification results showing document structure and metadata extraction</em>
 </p>
 
 <p align="center">

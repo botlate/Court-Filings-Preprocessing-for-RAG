@@ -37,6 +37,49 @@ bunch of text here
   <em>Classification results showing document structure and metadata extraction</em>
 </p>
 
+<div style="display: flex; align-items: flex-start; gap: 20px; margin: 20px 0;">
+  <div style="flex: 1;">
+    <img src="images/page_0001.png" width="100%" style="max-width: 480px; height: auto;">
+  </div>
+  <div style="flex: 1;">
+    <h4>Extracted Document Metadata</h4>
+    <pre style="background-color: #f6f8fa; padding: 15px; border-radius: 6px; font-size: 12px; overflow-x: auto;">
+{
+  "document_title": "Defendants' Memorandum of Points and Authorities in Support of Demurrer to Third Amended Complaint [Notice of Demurrer, Statement of Demurrer, Request for Judicial Notice, and Declaration of Nathaniel P. Garrett Filed Concurrently Herewith]",
+  "filing_date": "03/17/2022",
+  "filing_party": "Defendants",
+  "named_plaintiffs": [
+    "Glenn Mahler", "James H. Poole", "Julie Conger", "Edward M. Lacy Jr.",
+    "William S. Lebov", "John C. Minney", "John Sapunor"
+  ],
+  "named_defendants": [
+    "Judicial Council of California", "Chief Justice Tani G. Cantil-Sakauye", "Does One through Ten"
+  ],
+  "filing_attorneys": [
+    {
+      "name": "Robert A. Naeve",
+      "bar_number": "106095",
+      "email": "rnaeve@jonesday.com",
+      "firm": "Jones Day",
+      "address": "3161 Michelson Drive, Suite 800, Irvine, California 92612",
+      "telephone": "+1.949.851.3939",
+      "facsimile": "+1.949.553.7539",
+      "party_represented": "Defendants"
+    }
+  ],
+  "court": "Superior Court of the State of California, County of San Francisco",
+  "case_number": "CGC-19-575842",
+  "judge": "Hon. Richard B. Ulmer Jr.",
+  "department": "302",
+  "hearing_time": "9:30 a.m.",
+  "hearing_date": "April 12, 2022"
+}
+    </pre>
+    <p><em>AI-extracted structured data from the document's first page</em></p>
+  </div>
+</div>
+
+
 <p align="center">
   <img src="images/TOC_diagram.png" width="100%">
   <br>

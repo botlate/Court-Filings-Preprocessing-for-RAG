@@ -52,6 +52,12 @@ bunch of text here
   <i>5. The pipeline continues: TOC parsing, indexing, retrieval.</i>
 </p>
 
+<p align="center">
+  <img src="images/footnote_mover.png" width="80%">
+  <br>
+  <i>5. Footnotes are moved inline so they aren't detached from the in-body reference point during chunking.</i>
+</p>
+
 ---
 
 ### Swap in your actual images

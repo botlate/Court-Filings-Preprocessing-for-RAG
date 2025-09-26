@@ -20,14 +20,7 @@ bunch of text here
   <i>2. Each page image is sent to the AI for classification.</i>
 </p>
 
-<p align="center">
-  <img src="images/classification_map.png" width="80%">
-  <br>
-  <i>3. The AI maps page numbers to document types.</i>
-</p>
 
-<p align="center">
-  <i>4. A structured spreadsheet output is generated.</i>
 </p>
 
 | Filename | Category | Exhibit Label | Exhibit Title | Notes | Footnote | Block Quote |
@@ -43,6 +36,15 @@ bunch of text here
 <p align="center">
   <em>Classification results showing document structure and metadata extraction</em>
 </p>
+
+<p align="center">
+  <img src="images/classification_map.png" width="80%">
+  <br>
+  <i>3. The AI maps page numbers to document types.</i>
+</p>
+
+<p align="center">
+  <i>4. A structured spreadsheet output is generated.</i>
 
 <p align="center">
   <img src="images/workflow.png" width="80%">

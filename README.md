@@ -38,7 +38,7 @@ bunch of text here
 </p>
 
 <p align="center">
-  <img src="images/classification_map.png" width="80%">
+  <img src="images/TOC_diagram.png" width="80%">
   <br>
   <i>3. The AI maps page numbers to document types.</i>
 </p>

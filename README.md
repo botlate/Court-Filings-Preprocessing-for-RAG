@@ -27,7 +27,7 @@ bunch of text here
 </p>
 
 <p align="center">
-  <img src="images/spreadsheets.png" width="80%">
+  <img src="images/2001 01 01 Def Motion_classification.csv" width="80%">
   <br>
   <i>4. A structured spreadsheet output is generated.</i>
 </p>

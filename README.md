@@ -15,7 +15,7 @@ bunch of text here
 
 
 <p align="center">
-  <img src="images/classification_basic3.png" width="80%">
+  <img src="images/classification_basic3.png" width="100%">
   <br>
   <i>2. Each page image is sent to the AI for classification.</i>
 </p>
@@ -47,13 +47,13 @@ bunch of text here
   <i>4. A structured spreadsheet output is generated.</i>
 
 <p align="center">
-  <img src="images/page_0000_caption.png" width="80%">
+  <img src="images/page_0000_caption.png" width="100%">
   <br>
   <i>5. The pipeline continues: TOC parsing, indexing, retrieval.</i>
 </p>
 
 <p align="center">
-  <img src="images/footnote_mover.png" width="80%">
+  <img src="images/footnote_mover.png" width="100%">
   <br>
   <i>5. Footnotes are moved inline so they aren't detached from the in-body reference point during chunking.</i>
 </p>

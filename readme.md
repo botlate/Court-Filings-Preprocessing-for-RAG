@@ -64,7 +64,7 @@ From classified pages, extract:
 - **TOC structure** - Section headings and hierarchy
 
 #### Example: TOC Extraction and Processing
-<img src="./images/toc_map_bigger.png" width="700" alt="How TOC is extracted and structured">
+<img src="./images/TOC_map_bigger.png" width="700" alt="Extraction of structured TOC">
 
 The TOC is converted from visual layout to structured markdown. This hashtag hierarhy is later mapped onto headers in the pleading body pages, which allows them to be chunked by argument section instead of page or tokens. 
 

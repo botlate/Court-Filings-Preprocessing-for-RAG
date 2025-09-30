@@ -105,12 +105,13 @@ Chunks are outputted in JSON contains:
   "filing_date": "2024-03-15",
   "section_path": "BACKGROUND / A. Plaintiffs’ Factual Allegations",
   "chunk_ID": 14,
-  "document_ID": 00054,
+  "document_ID": 54,
   "page_numbers": [8, 9],
   "exhibit_label": null,
   "exhibit_title": null,
   "page_type": "pleading_body",
-  "text": " [PDF_page_8_cont.] A. Plaintiffs’ Factual Allegations.
+  "text": "
+[PDF_page_8_cont.] A. Plaintiffs’ Factual Allegations.
 Plaintiffs challenge recent changes to the TAJP implemented by Defendants, the Judicial
 Council of California and Chief Justice Tani G. Cantil-Sakauye. FAC ¶ 1.
 Article VI, section 6(e) of the California Constitution provides that the Chief Justice "shall
@@ -127,7 +128,9 @@ office by the Commission on Judicial Performance, and must have met minimum age 
 of-service requirements. Id. ¶ 4 (citing Gov’t Code § 75025). To remain in the program, a retired
 judge must, at a minimum, "serve at least 25 days each fiscal year." Id. ¶ 5. Plaintiffs allege that
 until May 21, 2018, there was no maximum limit on the number of days a retired judge could
-participate in the TAJP. Id. ¶ 7."
+participate in the TAJP. Id. ¶ 7.
+     "
+
 }
 
 ///////////////////
@@ -139,12 +142,12 @@ participate in the TAJP. Id. ¶ 7."
   "filing_date": "2024-03-15",
   "section_path": "BACKGROUND / A. Plaintiffs’ Factual Allegations",
   "chunk_ID": 15,
-  "document_ID": 00054,
+  "document_ID": 54,
   "page_numbers": [9],
   "exhibit_label": null,
   "exhibit_title": null,
   "page_type": "pleading_body",
-
+  "text": "
 [PDF_page_9_cont] On May 21, 2018, Defendants limited the number of days a retired judge can participate in
 the TAJP to 1,320-service days. FAC ¶ 7. The FAC alleges that all plaintiffs have already
 accumulated over 1,320-service days in the program. Id. ¶¶ 8-16.

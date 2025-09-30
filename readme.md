@@ -30,7 +30,7 @@ This system extracts and embeds in each chunk the minimum background knowledge a
 
 ### 1. PDF Decomposition
 
-<img src="./images/step1_pdf_decomposition.png" width="800" alt="Step 1: PDF decomposition showing creation of text files, metadata, and PNG folders">
+<img src="./images/pdf_split_2.png" width="800" alt="Step 1: PDF decomposition showing creation of text files, metadata, and PNG folders">
 
 - **Input**: PDF litigation filings
 - **Process**: PyMuPDF extraction at 300 DPI (or other local PDF tools like Acrobat, ABBYY)
@@ -41,7 +41,7 @@ This system extracts and embeds in each chunk the minimum background knowledge a
 
 ### 2. Page Classification (Critical Step)
 
-![Page Classification Flow](./images/page_classification_flow.png)
+![Page Classification Flow](./images/classification_first_part_bigger.png)
 
 Using GPT-5-mini vision model, each page is classified:
 
@@ -54,9 +54,6 @@ Using GPT-5-mini vision model, each page is classified:
 | Exhibit cover/content | Supporting evidence | Prevents confusion with main filing |
 | Court form | Standardized forms | Different processing rules |
 | Proof of service | Service documentation | Can be excluded from retrieval |
-
-#### Example: Pleading First Page
-<img src="./images/example_pleading_page.png" width="600" alt="Example of a pleading first page with caption information">
 
 ### 3. Metadata Extraction
 From classified pages, extract:

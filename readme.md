@@ -64,7 +64,7 @@ From classified pages, extract:
 - **TOC structure** - Section headings and hierarchy
 
 #### Example: TOC Extraction and Processing
-<img src="./images/toc_extraction_example.png" width="700" alt="How TOC is extracted and structured">
+<img src="./images/toc_map_bigger.png" width="700" alt="How TOC is extracted and structured">
 
 The TOC is converted from visual layout to structured markdown hierarchy to allow tagging and chunking text by section.
 

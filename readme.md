@@ -66,6 +66,9 @@ From classified pages, extract:
 - **Exhibit labels** - A, B, 1, 2, etc.
 - **TOC structure** - Section headings and hierarchy
 
+#### Example: Caption page processing
+<img src="./images/page_0000_caption_bigger.png" width="600" alt="Caption page information extract">
+
 #### Example: TOC Extraction and Processing
 <img src="./images/TOC_map_bigger.png" width="700" alt="Extraction of structured TOC">
 
@@ -95,7 +98,7 @@ The TOC is converted from visual layout to structured markdown. This hashtag hie
 #### 6. Final Chunk Format
 The app is designed to take this input and convert it into the chunks below.
 
-<img src="./images/chunking.png" width="600" alt="Step 1: PDF decomposition showing creation of text files, metadata, and PNG folders">
+<img src="./images/chunking.png" width="600" alt="Pages chunked">
 
 Chunks are outputted in JSON containers:
 ```json

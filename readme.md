@@ -66,7 +66,7 @@ From classified pages, extract:
 #### Example: TOC Extraction and Processing
 <img src="./images/toc_map_bigger.png" width="700" alt="How TOC is extracted and structured">
 
-The TOC is converted from visual layout to structured markdown hierarchy to allow tagging and chunking text by section.
+The TOC is converted from visual layout to structured markdown. This hashtag hierarhy is later mapped onto headers in the pleading body pages, which allows them to be chunked by argument section instead of page or tokens. 
 
 ### 4. Text Cleanup *(under construction)*
 - Move footnotes inline and tag

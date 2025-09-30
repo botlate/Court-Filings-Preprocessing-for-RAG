@@ -41,7 +41,7 @@ This system extracts and embeds in each chunk the minimum background knowledge a
 
 ### 2. Page Classification (Critical Step)
 
-![Page Classification Flow](./images/classification_first_part_bigger.png)
+<img src="./images/classification_first_part_bigger.png" width="800" alt="Step 1: PDF decomposition showing creation of text files, metadata, and PNG folders">
 
 Using GPT-5-mini vision model, each page is classified:
 

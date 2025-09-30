@@ -14,9 +14,6 @@ This system extracts and embeds in each chunk the minimum background knowledge a
 
 ## Pipeline Overview
 
-![Pipeline Beginnging to End Diagram](./images/chunk_page_image.png)
-
-
 
 
 ### Key Steps:

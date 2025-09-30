@@ -8,13 +8,16 @@ Standard RAG systems don't work well for legal documents because they ignore con
 
 This system extracts and embeds in each chunk the minimum background knowledge a litigator would need to make sense of that chunk independently: what document it's from, which part, who filed it and when, and what argument section it belongs to. Each chunk becomes a self-contained unit with enough context for useful legal retrieval.
 
-[→ Read more about why context matters in legal RAG](#why-standard-rag-fails-for-legal-work)
+[→ More on the thinking behind the app is below](#why-standard-rag-fails-for-legal-work)
 
 ---
 
 ## Pipeline Overview
 
-![Pipeline Flow Diagram](./images/pipeline_overview.png)
+![Pipeline Beginnging to End Diagram](./images/chunk_page_image.png)
+
+
+
 
 ### Key Steps:
 1. **Extract**: PDF → (PNG images + .txt); remove line numbers
@@ -45,15 +48,15 @@ This system extracts and embeds in each chunk the minimum background knowledge a
 
 Using GPT-5-mini vision model, each page is classified:
 
-| Category | Description | Why It Matters |
-|----------|-------------|----------------|
-| Pleading first page | Caption with case info | Identifies document metadata |
-| Table of contents | Document structure | Enables section-aware chunking |
-| Table of authorities | Legal citations index | Distinguishes citations from arguments |
-| Pleading body | Main legal arguments | Core content for analysis |
-| Exhibit cover/content | Supporting evidence | Prevents confusion with main filing |
-| Court form | Standardized forms | Different processing rules |
-| Proof of service | Service documentation | Can be excluded from retrieval |
+| Category | Description |
+|----------|-------------|
+| Pleading first page | Identifies document metadata |
+| Table of contents | Used for chunking |
+| Table of authorities |  
+| Pleading body | Main legal arguments |
+| Exhibit cover/content | Labelled and titled |
+| Court form |
+| Proof of service |
 
 ### 3. Metadata Extraction
 From classified pages, extract:
@@ -69,8 +72,8 @@ From classified pages, extract:
 The TOC is converted from visual layout to structured markdown. This hashtag hierarhy is later mapped onto headers in the pleading body pages, which allows them to be chunked by argument section instead of page or tokens. 
 
 ### 4. Text Cleanup *(under construction)*
-- Move footnotes inline and tag
-- Tag block quotes
+- Footnotes are tagged {FN(3)}...footnote text...{FN(3)_end} and moved into the body of the text. This prevents 
+- Block quotes are tagged {Block_quote} because formatting losses make them difficult to spot.  
 - Additional formatting cleanup
 
 ### 5. Chunking
@@ -88,6 +91,48 @@ The TOC is converted from visual layout to structured markdown. This hashtag hie
   - Sentence boundaries
   - Exhibit boundaries
   - Structural markers
+ 
+#### 6. Final Chunk Format
+
+
+Each chunk in the JSONL contains:
+```json
+{
+  "document_title": "DEFENDANTS' MEMORANDUM OF POINTS AND AUTHORITIES IN SUPPORT OF DEMURRER TO FIRST AMENDED COMPLAINT",
+  "filing_party": "Defemdamt",
+  "filing_date": "2024-03-15",
+  "section_path": "BACKGROUND / A. Plaintiffs’ Factual Allegations",
+  "chunk_ID": 14
+  "document_ID": 00054
+  "page_numbers": [7, 8],
+  "exhibit_label": null,
+  "exhibit_title": null,
+  "category": "pleading_body"
+  "text": "
+
+{PDF_page_8_cont.} A. Plaintiffs’ Factual Allegations.
+Plaintiffs challenge recent changes to the TAJP implemented by Defendants, the Judicial
+Council of California and Chief Justice Tani G. Cantil-Sakauye. FAC ¶ 1.
+Article VI, section 6(e) of the California Constitution provides that the Chief Justice “shall
+seek to expedite judicial business and to equalize the work of judges,” and “may provide for the
+assignment of any judge to another court … with the judge’s consent.” FAC ¶ 3 (quoting Cal.
+Const. art. VI, § 6(e)). Section 6(e) provides that “[a] retired judge who consents may be
+assigned to any court.” Id.
+According to the FAC, the TAJP establishes the structure by which the Chief Justice
+“temporarily assigns retired judges to fill judicial vacancies and to cover for vacations, illnesses,
+disqualification and other absences.” FAC ¶ 2. To be eligible to participate in the TAJP, a retired
+judge must not have been defeated in an election for office, must not have been removed from
+ {PDF_page_9} MEM. OF P. & A. IN SUPP. OF DEMURRER
+office by the Commission on Judicial Performance, and must have met minimum age and years-
+of-service requirements. Id. ¶ 4 (citing Gov’t Code § 75025). To remain in the program, a retired
+judge must, at a minimum, “serve at least 25 days each fiscal year.” Id. ¶ 5. Plaintiffs allege that
+until May 21, 2018, there was no maximum limit on the number of days a retired judge could
+participate in the TAJP. Id. ¶ 7.
+                                      ***
+"
+}
+
+
 
 ### 5. Output Structure
 ```
@@ -103,21 +148,7 @@ The TOC is converted from visual layout to structured markdown. This hashtag hie
     └── chunk_XXXX.txt   # Individual chunk files
 ```
 
-### 6. Final Chunk Format
-Each chunk in the JSONL contains:
-```json
-{
-  "doc_id": "2024_03_15_Pltf_MSJ",
-  "document_title": "Motion for Summary Judgment",
-  "filing_party": "plaintiff",
-  "filing_date": "2024-03-15",
-  "section_path": "II. ARGUMENT / A. Liability Standards",
-  "chunk_index": 3,
-  "page_numbers": [12, 13],
-  "text": "...",
-  "exhibit_label": null,
-  "category": "pleading_body"
-}
+
 ```
 
 ---

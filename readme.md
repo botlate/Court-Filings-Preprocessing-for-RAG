@@ -98,7 +98,6 @@ The app is designed to take this input and convert it into the chunks below.
 <img src="./images/chunking.png" width="600" alt="Step 1: PDF decomposition showing creation of text files, metadata, and PNG folders">
 
 Chunks are outputted in JSON contains:
-```json
 {
   "document_title": "DEFENDANTS' MEMORANDUM OF POINTS AND AUTHORITIES IN SUPPORT OF DEMURRER TO FIRST AMENDED COMPLAINT",
   "filing_party": "Defendants",
@@ -110,32 +109,11 @@ Chunks are outputted in JSON contains:
   "exhibit_label": null,
   "exhibit_title": null,
   "page_type": "pleading_body",
-  "text": "
-[PDF_page_8_cont.] A. Plaintiffs’ Factual Allegations.
-Plaintiffs challenge recent changes to the TAJP implemented by Defendants, the Judicial
-Council of California and Chief Justice Tani G. Cantil-Sakauye. FAC ¶ 1.
-Article VI, section 6(e) of the California Constitution provides that the Chief Justice "shall
-seek to expedite judicial business and to equalize the work of judges," and "may provide for the
-assignment of any judge to another court … with the judge’s consent." FAC ¶ 3 (quoting Cal.
-Const. art. VI, § 6(e)). Section 6(e) provides that "[a] retired judge who consents may be
-assigned to any court." Id.
-According to the FAC, the TAJP establishes the structure by which the Chief Justice
-"temporarily assigns retired judges to fill judicial vacancies and to cover for vacations, illnesses,
-disqualification and other absences." FAC ¶ 2. To be eligible to participate in the TAJP, a retired
-judge must not have been defeated in an election for office, must not have been removed from
- [PDF_page_9] MEM. OF P. & A. IN SUPP. OF DEMURRER
-office by the Commission on Judicial Performance, and must have met minimum age and years-
-of-service requirements. Id. ¶ 4 (citing Gov’t Code § 75025). To remain in the program, a retired
-judge must, at a minimum, "serve at least 25 days each fiscal year." Id. ¶ 5. Plaintiffs allege that
-until May 21, 2018, there was no maximum limit on the number of days a retired judge could
-participate in the TAJP. Id. ¶ 7.
-     "
-
+  "text": "[PDF_page_8_cont.] A. Plaintiffs’ Factual Allegations.\nPlaintiffs challenge recent changes to the TAJP implemented by Defendants, the Judicial\nCouncil of California and Chief Justice Tani G. Cantil-Sakauye. FAC ¶ 1.\nArticle VI, section 6(e) of the California Constitution provides that the Chief Justice \"shall\nseek to expedite judicial business and to equalize the work of judges,\" and \"may provide for the\nassignment of any judge to another court … with the judge’s consent.\" FAC ¶ 3 (quoting Cal.\nConst. art. VI, § 6(e)). Section 6(e) provides that \"[a] retired judge who consents may be\nassigned to any court.\" Id.\nAccording to the FAC, the TAJP establishes the structure by which the Chief Justice\n\"temporarily assigns retired judges to fill judicial vacancies and to cover for vacations, illnesses,\ndisqualification and other absences.\" FAC ¶ 2. To be eligible to participate in the TAJP, a retired\njudge must not have been defeated in an election for office, must not have been removed from\n[PDF_page_9] MEM. OF P. & A. IN SUPP. OF DEMURRER\noffice by the Commission on Judicial Performance, and must have met minimum age and years-\nof-service requirements. Id. ¶ 4 (citing Gov’t Code § 75025). To remain in the program, a retired\njudge must, at a minimum, \"serve at least 25 days each fiscal year.\" Id. ¶ 5. Plaintiffs allege that\nuntil May 21, 2018, there was no maximum limit on the number of days a retired judge could\nparticipate in the TAJP. Id. ¶ 7."
 }
 
 ///////////////////
 
-```json
 {
   "document_title": "DEFENDANTS' MEMORANDUM OF POINTS AND AUTHORITIES IN SUPPORT OF DEMURRER TO FIRST AMENDED COMPLAINT",
   "filing_party": "Defendants",
@@ -147,24 +125,9 @@ participate in the TAJP. Id. ¶ 7.
   "exhibit_label": null,
   "exhibit_title": null,
   "page_type": "pleading_body",
-  "text": "
-[PDF_page_9_cont] On May 21, 2018, Defendants limited the number of days a retired judge can participate in
-the TAJP to 1,320-service days. FAC ¶ 7. The FAC alleges that all plaintiffs have already
-accumulated over 1,320-service days in the program. Id. ¶¶ 8-16.
-According to Plaintiffs, the 1,320-day service limit prevents them from participating in the
-TAJP under the same terms and conditions “as are applicable to younger judges." FAC ¶ 16.
-They allege that the 1,320-day service limit “has a disparate impact on plaintiffs and other
-persons of their age" because they "will no longer be given assignments unless they receive an
-'exception' to the policy." Id. ¶ 24. Plaintiffs summarily allege the 1,320-day service limit “does
-not apply to younger, more recently retired judges." Id. ¶ 26.
-The FAC states two causes of action. Count One alleges unlawful disparate impact age
-discrimination in violation of the FEHA. FAC ¶ 30. Count Two alleges "Violation of the
-California Constitution," claiming that the 1,320-day service limit violates sections 6(d) and 6(e)
-of article VI of the California Constitution. Id. ¶¶ 33-34. Plaintiffs seek "back pay, front pay,
-and other monetary relief," as well as declaratory and injunctive relief. See FAC at Prayer for
-Relief."
+  "text": "[PDF_page_9_cont] On May 21, 2018, Defendants limited the number of days a retired judge can participate in\nthe TAJP to 1,320-service days. FAC ¶ 7. The FAC alleges that all plaintiffs have already\naccumulated over 1,320-service days in the program. Id. ¶¶ 8-16.\nAccording to Plaintiffs, the 1,320-day service limit prevents them from participating in the\nTAJP under the same terms and conditions “as are applicable to younger judges.\" FAC ¶ 16.\nThey allege that the 1,320-day service limit “has a disparate impact on plaintiffs and other\npersons of their age\" because they \"will no longer be given assignments unless they receive an\n'exception' to the policy.\" Id. ¶ 24. Plaintiffs summarily allege the 1,320-day service limit “does\nnot apply to younger, more recently retired judges.\" Id. ¶ 26.\nThe FAC states two causes of action. Count One alleges unlawful disparate impact age\ndiscrimination in violation of the FEHA. FAC ¶ 30. Count Two alleges \"Violation of the\nCalifornia Constitution,\" claiming that the 1,320-day service limit violates sections 6(d) and 6(e)\nof article VI of the California Constitution. Id. ¶¶ 33-34. Plaintiffs seek \"back pay, front pay,\nand other monetary relief,\" as well as declaratory and injunctive relief. See FAC at Prayer for\nRelief."
 }
-'''
+
 
 
 ### 5. Output Structure

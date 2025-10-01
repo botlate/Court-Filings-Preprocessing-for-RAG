@@ -203,15 +203,15 @@ This pipeline is functional but actively being refined. Contributions and bug re
 
 ## Why Standard RAG Fails for Legal Work
 
-### The Index Card Analogy
+### Index Card Analogy
 Think of a RAG database as a big box of index cards. Each card is a chunk of text, and a robot—a retrieval algorithm, not an AI—compiles a small stack of cards most similar to the user's query and passes those to the AI. The robot itself is not an AI; it's dumb. It doesn't make sense of each chunk in relation to every other chunk. In fact, it doesn't even know whether two chunks are from the same document.
 
-### Why Context Is Everything
+### The Indispensible Categories of Context
 Legal arguments are nested and referential. Two chunks can look nearly identical in meaning but differ entirely in significance depending on their location in the corpus, the arguments parties have advanced, and the litigation's trajectory.
 
 Consider: Defendant's motion summarizes plaintiff's fifth cause of action as alleged in the third amended complaint. This should not be used to understand what the fifth cause of action actually asserts, only what the defendant claims it asserts (or fails to). 
 
-### The Negligence vs. Mandate Problem
+### Example - Exact same text of allegation varied with "cause of action" or defendant type
 Without contextual tagging, the statement "defendant was required to timely process plaintiff's tax information" could be:
 1. An allegation of duty in a negligence claim (relief: monetary damages)
 2. An allegation of ministerial duty (relief: writ of mandate ordering action)

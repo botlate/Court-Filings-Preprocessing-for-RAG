@@ -8,7 +8,7 @@ Standard RAG systems don't work well for legal documents because they ignore con
 
 This system extracts and embeds in each chunk the minimum background knowledge a litigator would need to make sense of that chunk independently: what document it's from, which part, who filed it and when, and what argument section it belongs to. Each chunk becomes a self-contained unit with enough context for useful legal retrieval.
 
-[→ More on the thinking behind the app is below](#why-standard-rag-fails-for-legal-work)
+[→ More on the thinking behind the app](#why-standard-rag-fails-for-legal-work)
 
 ---
 

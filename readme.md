@@ -203,9 +203,6 @@ This pipeline is functional but actively being refined. Contributions and bug re
 
 ## Why Standard RAG Fails for Legal Work
 
-<details>
-<summary>Click to expand philosophical discussion</summary>
-
 ### The Index Card Analogy
 Think of a RAG database as a big box of index cards. Each card is a chunk of text, and a robot—a retrieval algorithm, not an AI—compiles a small stack of cards most similar to the user's query and passes those to the AI. The robot itself is not an AI; it's dumb. It doesn't make sense of each chunk in relation to every other chunk. In fact, it doesn't even know whether two chunks are from the same document.
 
@@ -228,8 +225,6 @@ If it's negligence against a government entity, there may be immunity. If plaint
 - Minimum viable context: just what a litigator needs
 
 One could never draft a brief with a box of document snippets and a robot that can only identify thematic similarity. In working with legal documents, retrieval unmoored from context will return flotsam. Each chunk must carry the background knowledge an attorney would already have when drafting.
-
-</details>
 
 ---
 

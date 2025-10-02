@@ -3,6 +3,10 @@
 ## Objective
 Pre-processes litigation filings into contextually tagged chunks for attorney use in a RAG repository.
 
+
+<img src="./images/chunk_example_small.png" width="600" alt="Starting text">
+
+
 ## Purpose
 Standard RAG systems don't work well for legal documents because they ignore context. The same text means different things depending on whether it's in a complaint vs. a motion, the main argument vs. an exhibit, or plaintiff's allegation vs. defendant's characterization. When it was filed and by whom matters.
 

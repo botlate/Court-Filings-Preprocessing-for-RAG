@@ -15,17 +15,16 @@ Pre-processes litigation filings into contextually tagged chunks for attorney us
   <div style="flex:1 1 0; min-width:320px; max-width:52ch; border:1px solid #bbb; padding:8px; background:#fdfdfd; box-sizing:border-box; overflow:auto;">
     <strong>Chunk 5997_006</strong>
     <pre style="white-space:pre-wrap; word-break:break-word; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size:0.82em; line-height:1.35; margin-top:6px;">
-Document ID: 5997
-Chunk ID: 006
-Document Title: DEFENDANTS’ MEMORANDUM OF POINTS AND AUTHORITIES IN SUPPORT OF DEMURRERS TO SECOND AMENDED COMPLAINT
-Filing Party: Defendants (Judicial Council of California and Chief Justice Tani G. Cantil-Sakauye)
-Filing Date: 11/22/2021
-Section Path: BACKGROUND / B. Challenges to Plaintiffs’ First Amended Complaint / 2. The Superior Court Sustained Defendants’ Demurrer Without Leave to Amend
-Pages: 8
-Page Type: Pleading body
-Token Count: 241
+Document_ID: 5997
+Chunk_ID: 006
+Document_Title: DEFENDANTS’ MEMORANDUM OF POINTS AND AUTHORITIES IN SUPPORT OF DEMURRERS TO SECOND AMENDED COMPLAINT
+Filing_Party: Defendants (Judicial Council of California and Chief Justice Tani G. Cantil-Sakauye)
+Filing_Date: 11/22/2021
+Section_Path: BACKGROUND / B. Challenges to Plaintiffs’ First Amended Complaint / 2. The Superior Court Sustained Defendants’ Demurrer Without Leave to Amend
+PDF_pages: 8
+Page_Type: Pleading body
 ==================================================
-{PDF_page_8_cont.}
+[PDF_page_8_cont.]
 2. The Superior Court Sustained Defendants’ Demurrer Without Leave to Amend.
 Defendants then demurred on the same grounds. The Court sustained Defendants’
 demurrer on the basis of legislative immunity, referring back to its prior ruling denying injunctive

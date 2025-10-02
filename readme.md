@@ -3,8 +3,6 @@
 ## Objective
 Pre-processes litigation filings into contextually tagged chunks for attorney use in a RAG repository.
 
-<img src="./images/chunk_small_example.png" width="300" alt="Starting text">
-
 <!-- Begin: Page image (L) + Chunk 5997_006 text (R) -->
 <div style="display: flex; align-items: flex-start; gap: 16px; margin: 12px 0;">
 

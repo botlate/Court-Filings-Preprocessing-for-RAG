@@ -3,24 +3,48 @@
 ## Objective
 Pre-processes litigation filings into contextually tagged chunks for attorney use in a RAG repository.
 
-
 <img src="./images/chunk_small_example.png" width="300" alt="Starting text">
-<div style="display: flex; align-items: flex-start; gap: 20px;">
 
-  <!-- Left side: Image -->
+<!-- Begin: Page image (L) + Chunk 5997_006 text (R) -->
+<div style="display: flex; align-items: flex-start; gap: 16px; margin: 12px 0;">
+
+  <!-- Left: Page image -->
   <div>
-    <img src="./images/chunk_small_example.png" width="300" alt="Starting text">
+    <img src="./images/chunk_small_example.png" width="420" alt="Page image preview">
   </div>
 
-  <!-- Right side: Text box -->
-  <div style="border: 1px solid #ccc; padding: 10px; max-width: 400px; background-color: #f9f9f9;">
-    <strong>Excerpt – Defendants’ Demurrer</strong><br><br>
-    2. The Superior Court Sustained Defendants’ Demurrer Without Leave to Amend.<br><br>
-    Defendants then demurred on the same grounds. The Court sustained Defendants’ demurrer on the basis of legislative immunity, referring back to its prior ruling denying injunctive relief. Mahler, Cal.App.5th at 100. The Court also provided additional grounds for dismissing Plaintiffs’ constitutional claim: that Plaintiffs did not oppose Defendants’ demurrer as to that claim, that there is no private right of action to enforce the relevant constitutional provision, and that the complaint failed to adequately allege a violation of that provision.<br><br>
-    Plaintiffs appealed, but they limited their challenge to the trial court’s ruling on their FEHA claim. Plaintiffs expressly did “not challenge in this appeal the trial court’s ruling that there is no cause of action under Cal. Const., art. VI, § 6, (e).”
+  <!-- Right: Text box with chunk content -->
+  <div style="flex: 1; border: 1px solid #ddd; padding: 12px; background: #f9f9f9;">
+    <strong>Chunk 5997_006</strong>
+    <div style="white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 0.95em; line-height: 1.5; margin-top: 8px;">
+Document ID: 5997
+Chunk ID: 006
+Document Title: DEFENDANTS’ MEMORANDUM OF POINTS AND AUTHORITIES IN SUPPORT OF DEMURRERS TO SECOND AMENDED COMPLAINT
+Filing Party: Defendants (Judicial Council of California and Chief Justice Tani G. Cantil‑Sakauye)
+Filing Date: 11/22/2021
+Section Path: BACKGROUND / B. Challenges to Plaintiffs’ First Amended Complaint / 2. The Superior Court Sustained Defendants’ Demurrer Without Leave to Amend
+Pages: 8
+Page Type: Pleading body
+Token Count: 241
+==================================================
+{PDF_page_8_cont.}
+2. The Superior Court Sustained Defendants’ Demurrer Without Leave to Amend.
+Defendants then demurred on the same grounds. The Court sustained Defendants’
+demurrer on the basis of legislative immunity, referring back to its prior ruling denying injunctive
+relief. Mahler, Cal.App.5th at 100. The Court also provided additional grounds for
+dismissing Plaintiffs’ constitutional claim: that Plaintiffs did not oppose Defendants’ demurrer as
+to that claim, that there is no private right of action to enforce the relevant constitutional
+provision, and that the complaint failed to adequately allege a violation of that provision.
+Plaintiffs appealed, but they limited their challenge to the trial court’s ruling on their
+FEHA claim. Plaintiffs expressly did “not challenge in this appeal the trial court’s ruling that
+there is no cause of action under Cal. Const., art. VI, § 6, (e).” Mahler v. Judicial Council of
+Cal., Opening Brief, 2020 WL 1290458, at *17 n.8.
+    </div>
   </div>
 
 </div>
+<!-- End: Page image (L) + Chunk 5997_006 text (R) -->
+
 
 ## Purpose
 Standard RAG systems don't work well for legal documents because they ignore context. The same text means different things depending on whether it's in a complaint vs. a motion, the main argument vs. an exhibit, or plaintiff's allegation vs. defendant's characterization. When it was filed and by whom matters.

@@ -34,7 +34,7 @@ This system extracts and embeds in each chunk the minimum background knowledge a
 
 ### 1. PDF Decomposition
 
-<img src="./images/pdf_split_2.png" width="600" alt="Step 1: PDF decomposition showing creation of text files, metadata, and PNG folders">
+<img src="./images/pdf_split_2.png" width="450" alt="Step 1: PDF decomposition showing creation of text files, metadata, and PNG folders">
 
 - **Input**: PDF litigation filings
 - **Process**: PyMuPDF extraction at 300 DPI (or other local PDF tools like Acrobat, ABBYY)
@@ -45,7 +45,7 @@ This system extracts and embeds in each chunk the minimum background knowledge a
 
 ### 2. Page Classification (Critical Step)
 
-<img src="./images/classification_first_part_bigger.png" width="300" alt="Step 1: PDF decomposition showing creation of text files, metadata, and PNG folders">
+<img src="./images/classification_first_part_bigger.png" width="450" alt="Step 1: PDF decomposition showing creation of text files, metadata, and PNG folders">
 
 Using GPT-5-mini vision model, each page is classified:
 
@@ -71,7 +71,7 @@ From classified pages, extract:
 <img src="./images/page_0000_caption_bigger.png" width="400" alt="Caption page information extract">
 
 #### Example: TOC Extraction and Processing
-<img src="./images/TOC_map_bigger.png" width="700" alt="Extraction of structured TOC">
+<img src="./images/TOC_map_bigger.png" width="600" alt="Extraction of structured TOC">
 
 The TOC is converted from visual layout to structured markdown. This hashtag hierarhy is later mapped onto headers in the pleading body pages, which allows them to be chunked by argument section instead of page or tokens. 
 

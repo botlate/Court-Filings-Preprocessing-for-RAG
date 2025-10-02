@@ -8,17 +8,17 @@ Pre-processes litigation filings into contextually tagged chunks for attorney us
 
   <!-- Left: Page image -->
   <div>
-    <img src="./images/chunk_small_example.png" width="420" alt="Page image preview">
+    <img src="./images/page_0008.png" width="420" alt="Page image preview">
   </div>
 
   <!-- Right: Text box with chunk content -->
-  <div style="flex: 1; border: 1px solid #ddd; padding: 12px; background: #f9f9f9;">
+  <div style="flex: 1; border: 1px solid #bbb; padding: 12px; background: #fdfdfd; overflow-x: auto;">
     <strong>Chunk 5997_006</strong>
-    <div style="white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 0.95em; line-height: 1.5; margin-top: 8px;">
+    <pre style="white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 0.9em; line-height: 1.5; margin-top: 8px;">
 Document ID: 5997
 Chunk ID: 006
 Document Title: DEFENDANTS’ MEMORANDUM OF POINTS AND AUTHORITIES IN SUPPORT OF DEMURRERS TO SECOND AMENDED COMPLAINT
-Filing Party: Defendants (Judicial Council of California and Chief Justice Tani G. Cantil‑Sakauye)
+Filing Party: Defendants (Judicial Council of California and Chief Justice Tani G. Cantil-Sakauye)
 Filing Date: 11/22/2021
 Section Path: BACKGROUND / B. Challenges to Plaintiffs’ First Amended Complaint / 2. The Superior Court Sustained Defendants’ Demurrer Without Leave to Amend
 Pages: 8
@@ -37,7 +37,7 @@ Plaintiffs appealed, but they limited their challenge to the trial court’s rul
 FEHA claim. Plaintiffs expressly did “not challenge in this appeal the trial court’s ruling that
 there is no cause of action under Cal. Const., art. VI, § 6, (e).” Mahler v. Judicial Council of
 Cal., Opening Brief, 2020 WL 1290458, at *17 n.8.
-    </div>
+    </pre>
   </div>
 
 </div>

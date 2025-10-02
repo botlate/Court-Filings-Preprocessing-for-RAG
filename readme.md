@@ -5,7 +5,22 @@ Pre-processes litigation filings into contextually tagged chunks for attorney us
 
 
 <img src="./images/chunk_small_example.png" width="300" alt="Starting text">
+<div style="display: flex; align-items: flex-start; gap: 20px;">
 
+  <!-- Left side: Image -->
+  <div>
+    <img src="./images/chunk_small_example.png" width="300" alt="Starting text">
+  </div>
+
+  <!-- Right side: Text box -->
+  <div style="border: 1px solid #ccc; padding: 10px; max-width: 400px; background-color: #f9f9f9;">
+    <strong>Excerpt – Defendants’ Demurrer</strong><br><br>
+    2. The Superior Court Sustained Defendants’ Demurrer Without Leave to Amend.<br><br>
+    Defendants then demurred on the same grounds. The Court sustained Defendants’ demurrer on the basis of legislative immunity, referring back to its prior ruling denying injunctive relief. Mahler, Cal.App.5th at 100. The Court also provided additional grounds for dismissing Plaintiffs’ constitutional claim: that Plaintiffs did not oppose Defendants’ demurrer as to that claim, that there is no private right of action to enforce the relevant constitutional provision, and that the complaint failed to adequately allege a violation of that provision.<br><br>
+    Plaintiffs appealed, but they limited their challenge to the trial court’s ruling on their FEHA claim. Plaintiffs expressly did “not challenge in this appeal the trial court’s ruling that there is no cause of action under Cal. Const., art. VI, § 6, (e).”
+  </div>
+
+</div>
 
 ## Purpose
 Standard RAG systems don't work well for legal documents because they ignore context. The same text means different things depending on whether it's in a complaint vs. a motion, the main argument vs. an exhibit, or plaintiff's allegation vs. defendant's characterization. When it was filed and by whom matters.
@@ -34,7 +49,7 @@ This system extracts and embeds in each chunk the minimum background knowledge a
 
 ### 1. PDF Decomposition
 
-<img src="./images/pdf_split_2.png" width="450" alt="Step 1: PDF decomposition showing creation of text files, metadata, and PNG folders">
+<img src="./images/pdf_split_2.png" width="300" alt="Step 1: PDF decomposition showing creation of text files, metadata, and PNG folders">
 
 - **Input**: PDF litigation filings
 - **Process**: PyMuPDF extraction at 300 DPI (or other local PDF tools like Acrobat, ABBYY)

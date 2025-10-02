@@ -4,17 +4,17 @@
 Pre-processes litigation filings into contextually tagged chunks for attorney use in a RAG repository.
 
 <!-- Begin: Page image (L) + Chunk 5997_006 text (R) -->
-<div style="display: flex; align-items: flex-start; gap: 16px; margin: 12px 0;">
+<div style="display:flex; align-items:flex-start; gap:12px; margin:12px 0; flex-wrap:wrap;">
 
   <!-- Left: Page image -->
-  <div>
-    <img src="./images/chunk_small_example.png" width="420" alt="Page image preview">
+  <div style="flex:0 0 auto;">
+    <img src="./images/chunk_small_example.png" width="360" alt="Page image preview">
   </div>
 
   <!-- Right: Text box with chunk content -->
-  <div style="flex: 1; border: 1px solid #bbb; padding: 12px; background: #fdfdfd; overflow-x: auto;">
+  <div style="flex:1 1 0; min-width:320px; max-width:52ch; border:1px solid #bbb; padding:8px; background:#fdfdfd; box-sizing:border-box; overflow:auto;">
     <strong>Chunk 5997_006</strong>
-    <pre style="white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 0.9em; line-height: 1.5; margin-top: 8px;">
+    <pre style="white-space:pre-wrap; word-break:break-word; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size:0.82em; line-height:1.35; margin-top:6px;">
 Document ID: 5997
 Chunk ID: 006
 Document Title: DEFENDANTS’ MEMORANDUM OF POINTS AND AUTHORITIES IN SUPPORT OF DEMURRERS TO SECOND AMENDED COMPLAINT
@@ -42,7 +42,6 @@ Cal., Opening Brief, 2020 WL 1290458, at *17 n.8.
 
 </div>
 <!-- End: Page image (L) + Chunk 5997_006 text (R) -->
-
 
 ## Purpose
 Standard RAG systems don't work well for legal documents because they ignore context. The same text means different things depending on whether it's in a complaint vs. a motion, the main argument vs. an exhibit, or plaintiff's allegation vs. defendant's characterization. When it was filed and by whom matters.

@@ -8,7 +8,7 @@ Pre-processes litigation filings into contextually tagged chunks for attorney us
 
   <!-- Left: Page image -->
   <div>
-    <img src="./images/page_0008.png" width="420" alt="Page image preview">
+    <img src="./images/chunk_small_example.png" width="420" alt="Page image preview">
   </div>
 
   <!-- Right: Text box with chunk content -->

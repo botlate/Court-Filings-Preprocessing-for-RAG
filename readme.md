@@ -4,7 +4,7 @@
 Pre-processes litigation filings into contextually tagged chunks for attorney use in a RAG repository.
 
 
-<img src="./images/chunk_small_example.png" width="600" alt="Starting text">
+<img src="./images/chunk_small_example.png" width="300" alt="Starting text">
 
 
 ## Purpose

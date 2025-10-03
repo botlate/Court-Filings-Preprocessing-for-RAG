@@ -1,14 +1,18 @@
 # Legal Document RAG Pipeline
 
 ## Objective
+## Objective
 Pre-processes litigation filings into contextually tagged chunks for attorney use in a RAG repository.
 
-<div>
-  <img src="./images/chunk_small_example.png" width="360" alt="Page image preview" style="float:left; margin-right:12px; margin-bottom:12px;">
+---
 
-  <div style="max-width:40ch; border:1px solid #bbb; padding:2px; background:#fdfdfd; box-sizing:border-box; overflow:auto;">
-    <strong>Chunk 5997_006</strong>
-    <pre style="white-space:pre-wrap; word-break:break-word; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size:0.5em; line-height:1; margin-top:2px;">
+### Page Preview
+<img src="./images/chunk_small_example.png" width="400" alt="Page image preview">
+
+<details>
+  <summary><strong>View Content for Chunk 5997_006</strong></summary>
+  <div style="border:1px solid #ddd; background:#fdfdfd; padding:0 8px; margin-top:8px;">
+    <pre style="white-space:pre-wrap; word-break:break-word; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size:0.5em; line-height:1.2;">
 Document_ID: 5997
 Chunk_ID: 006
 Document_Title: DEFENDANTS’ MEMORANDUM OF POINTS
@@ -28,16 +32,16 @@ Page_Type: Pleading body
 Demurrer Without Leave to Amend.
 Defendants then demurred on the same grounds.
 The Court sustained Defendants’...
-      [*text ommitted for length*]
+      [*text omitted for length*]
 ...there is no cause of action under
 Cal. Const., art. VI, § 6, (e).” Mahler v. 
 Judicial Council of Cal., Opening Brief,
 2020 WL 1290458, at *17 n.8.
     </pre>
   </div>
+</details>
 
-  <div style="clear:both;"></div>
-</div>
+---
 
 ## Purpose
 Standard RAG systems don't work well for legal documents because they ignore context. The same text means different things depending on whether it's in a complaint vs. a motion, the main argument vs. an exhibit, or plaintiff's allegation vs. defendant's characterization. When it was filed and by whom matters.

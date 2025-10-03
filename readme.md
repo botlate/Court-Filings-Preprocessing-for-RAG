@@ -105,7 +105,7 @@ The TOC is converted from visual layout to structured markdown. This hashtag hie
   - Exhibit boundaries
   - Structural markers
  
-#### 6. Final Chunk Format
+### 6. Final Chunk Format
 The app is designed to take this input and convert it into the chunks below.
 
 <img src="./images/chunking.png" width="600" alt="Pages chunked">

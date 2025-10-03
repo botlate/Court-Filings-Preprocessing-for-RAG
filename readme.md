@@ -1,45 +1,12 @@
 # Legal Document RAG Pipeline
 
 ## Objective
-## Objective
 Pre-processes litigation filings into contextually tagged chunks for attorney use in a RAG repository.
 
 ---
 
 ### Page Preview
-<img src="./images/chunk_small_example.png" width="400" alt="Page image preview">
-
-<details>
-  <summary><strong>View Content for Chunk 5997_006</strong></summary>
-  <div style="border:1px solid #ddd; background:#fdfdfd; padding:0 8px; margin-top:8px;">
-    <pre style="white-space:pre-wrap; word-break:break-word; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size:0.5em; line-height:1.2;">
-Document_ID: 5997
-Chunk_ID: 006
-Document_Title: DEFENDANTS’ MEMORANDUM OF POINTS
-AND AUTHORITIES IN SUPPORT OF 
-DEMURRERS TO SECOND AMENDED COMPLAINT
-Filing_Party: Defendants
-Filing_Date: 11/22/2021
-Section_Path: BACKGROUND / B. Challenges 
-to Plaintiffs’ First Amended Complaint 
-/ 2. The Superior Court Sustained Defendants’ 
-Demurrer Without Leave to Amend
-PDF_pages: [8]
-Page_Type: Pleading body
-==================================================
-[PDF_page_8_cont.]
-2. The Superior Court Sustained Defendants’
-Demurrer Without Leave to Amend.
-Defendants then demurred on the same grounds.
-The Court sustained Defendants’...
-      [*text omitted for length*]
-...there is no cause of action under
-Cal. Const., art. VI, § 6, (e).” Mahler v. 
-Judicial Council of Cal., Opening Brief,
-2020 WL 1290458, at *17 n.8.
-    </pre>
-  </div>
-</details>
+<img src="./images/page_to_chunk_01.png" width="600" alt="Page image preview">
 
 ---
 

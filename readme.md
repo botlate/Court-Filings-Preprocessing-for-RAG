@@ -3,6 +3,9 @@
 ## Objective
 Pre-processes litigation filings into contextually tagged chunks for attorney use in a RAG repository.
 
+## Objective
+Pre-processes litigation filings into contextually tagged chunks for attorney use in a RAG repository.
+
 <!-- Begin: Page image (L) + Chunk 5997_006 text (R) -->
 <div style="display:flex; align-items:flex-start; gap:12px; margin:12px 0; flex-wrap:wrap;">
 
@@ -44,6 +47,7 @@ Judicial Council of Cal., Opening Brief,
 
 </div>
 <!-- End: Page image (L) + Chunk 5997_006 text (R) -->
+
 
 ## Purpose
 Standard RAG systems don't work well for legal documents because they ignore context. The same text means different things depending on whether it's in a complaint vs. a motion, the main argument vs. an exhibit, or plaintiff's allegation vs. defendant's characterization. When it was filed and by whom matters.

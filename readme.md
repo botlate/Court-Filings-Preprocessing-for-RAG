@@ -197,14 +197,13 @@ This repository contains a suite of Python scripts designed to process, classify
 | `01_prompt_repository.py` | Stores all prompts for classification and vision models. | Required by the classifier. |
 | `10_pdf_extractor.py` | Extracts each page of a PDF as both a PNG image and cleaned text. | First step in the pipeline. |
 | `11_document_classifier.py` | Classifies pages of documents using GPT-5 vision. | This is the most critical step. |
-| `20_toc_formatter.py` | Cleans and structures the Table of Contents for chunking. | This is essential for documents with a Table of Contents. |
-| `21_metadata_aggregator.py` | Extracts document metadata and compiles it into a single CSV file named `output.csv`. | Creates `output.csv`. |
-| `22_folder_standardizer.py` | Standardizes folder names for legal documents and creates `standardized.csv`. | Creates `standardized.csv`. |
-| `23_data_synchronizer.py` | Detects changes in CSV files and propagates them back to source files. | This allows for bidirectional synchronization. |
-| `30_toc_chunker.py` | Chunks documents that have a Table of Contents. | This script uses the cleaned Table of Contents. |
-| `31_semantic_chunker.py` | Chunks documents that do not have a Table of Contents. | This is a fallback chunking method. |
-| `40_vision_enhancer.py` | Uses vision AI to find headings that regex-based detection may have missed. | |
-| `50_ocr_enhancer.py` | Provides the framework for integrating PaddleOCR capabilities. | |
+| `20_toc_formatter.py` | Cleans and structures the Table of Contents for later chunking. | This is essential for documents with a Table of Contents. |
+| `21_metadata_aggregator.py` | Pulls together file info for tracking and creates `output.csv`. | |
+| `22_folder_standardizer.py` | Standardizes folder names for legal documents and creates `standardized.csv`. | Won't change folder names if unnecessary |
+| `23_data_synchronizer.py` | Detects changes in CSV files and propagates them back to source files. | Allows for bidirectional synchronization. |
+| `30_toc_chunker.py` | Chunks documents that have a Table of Contents. | Maps the markdown TOC onto OCR, then chunks. |
+| `31_semantic_chunker.py` | Chunks documents that do not have a Table of Contents. | |
+| `99_ocr_enhancer.py` | Uses PaddleOCR or AI visionto ID footnotes and headers/footers. | TBD - will incorporate at earlier stage |
 | `id_system.py` | Manages document and chunk IDs across the pipeline. | |
 | `metadata_extractor.py` | Extracts metadata from various sources like caption files and classification CSV files. | |
 

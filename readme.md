@@ -17,21 +17,28 @@ Pre-processes litigation filings into contextually tagged chunks for attorney us
     <pre style="white-space:pre-wrap; word-break:break-word; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size:0.5em; line-height:1; margin-top:2px;">
 Document_ID: 5997
 Chunk_ID: 006
-Document_Title: DEFENDANTS’ MEMORANDUM OF POINTS AND AUTHORITIES IN SUPPORT OF 
+Document_Title: DEFENDANTS’ MEMORANDUM OF POINTS
+AND AUTHORITIES IN SUPPORT OF 
 DEMURRERS TO SECOND AMENDED COMPLAINT
 Filing_Party: Defendants
 Filing_Date: 11/22/2021
-Section_Path: BACKGROUND / B. Challenges to Plaintiffs’ First Amended Complaint 
-/ 2. The Superior Court Sustained Defendants’ Demurrer Without Leave to Amend
+Section_Path: BACKGROUND / B. Challenges 
+to Plaintiffs’ First Amended Complaint 
+/ 2. The Superior Court Sustained Defendants’ 
+Demurrer Without Leave to Amend
 PDF_pages: [8]
 Page_Type: Pleading body
 ==================================================
 [PDF_page_8_cont.]
-2. The Superior Court Sustained Defendants’ Demurrer Without Leave to Amend.
-Defendants then demurred on the same grounds. The Court sustained Defendants’...
+2. The Superior Court Sustained Defendants’
+Demurrer Without Leave to Amend.
+Defendants then demurred on the same grounds.
+The Court sustained Defendants’...
         [*text ommitted for length*]
-...there is no cause of action under Cal. Const., art. VI, § 6, (e).” Mahler v. 
-Judicial Council of Cal., Opening Brief, 2020 WL 1290458, at *17 n.8.
+...there is no cause of action under
+Cal. Const., art. VI, § 6, (e).” Mahler v. 
+Judicial Council of Cal., Opening Brief,
+2020 WL 1290458, at *17 n.8.
     </pre>
   </div>
 

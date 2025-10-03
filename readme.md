@@ -203,7 +203,7 @@ This repository contains a suite of Python scripts designed to process, classify
 | `23_data_synchronizer.py` | Detects changes in CSV files and propagates them back to source files. | Allows for bidirectional synchronization. |
 | `30_toc_chunker.py` | Chunks documents that have a Table of Contents. | Maps the markdown TOC onto OCR, then chunks. |
 | `31_semantic_chunker.py` | Chunks documents that do not have a Table of Contents. | |
-| `99_ocr_enhancer.py` | Uses PaddleOCR or AI visionto ID footnotes and headers/footers. | TBD - will incorporate at earlier stage |
+| `99_ocr_enhancer.py` | Uses PaddleOCR or AI vision to ID footnotes and headers/footers. | TBD - will incorporate at earlier stage |
 | `id_system.py` | Manages document and chunk IDs across the pipeline. | |
 | `metadata_extractor.py` | Extracts metadata from various sources like caption files and classification CSV files. | |
 

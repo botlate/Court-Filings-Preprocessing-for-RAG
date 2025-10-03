@@ -250,8 +250,5 @@ One could never draft a brief with a box of document snippets and a robot that c
 
 ---
 
-## Classification Examples
-[Add classification examples]
-
 ## License
 [Add license information]

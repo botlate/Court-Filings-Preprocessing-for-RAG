@@ -142,11 +142,11 @@ Chunks are outputted in JSON containers:
 ├── PNG/                 # Page images
 ├── text_pages/          # Extracted text
 ├── metadata/            
-│   ├── [doc]_classification.csv    # Page types
+│   ├── chunks.jsonl     # All chunks with metadata
+|   ├──  [doc]_classification.csv    # Page types
 │   ├── page_XXXX_caption.txt       # Document metadata
 │   └── page_XXXX_TOC.txt           # Table of contents
 └── chunks/              
-    ├── chunks.jsonl     # All chunks with metadata
     └── chunk_XXXX.txt   # Individual chunk files
 ```
 

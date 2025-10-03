@@ -5,7 +5,7 @@ Pre-processes litigation filings into contextually tagged chunks for attorney us
 
 ---
 
-### Page Preview
+### Objective - Chunk Example
 <img src="./images/page_to_chunk_01.png" width="600" alt="Page image preview">
 
 ---
@@ -37,7 +37,7 @@ This system extracts and embeds in each chunk the minimum background knowledge a
 
 ### 1. PDF Decomposition
 
-<img src="./images/pdf_split_2.png" width="300" alt="Step 1: PDF decomposition showing creation of text files, metadata, and PNG folders">
+<img src="./images/pdf_split_2.png" width="400" alt="Step 1: PDF decomposition showing creation of text files, metadata, and PNG folders">
 
 - **Input**: PDF litigation filings
 - **Process**: PyMuPDF extraction at 300 DPI (or other local PDF tools like Acrobat, ABBYY)

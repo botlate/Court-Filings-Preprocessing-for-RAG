@@ -149,7 +149,7 @@ Chunks are outputted in JSON containers:
 ├── text_pages/          # Extracted text
 ├── metadata/            
 │   ├── chunks.jsonl     # All chunks with metadata
-|   ├──  [doc]_classification.csv    # Page types
+|   ├── [doc]_classification.csv    # Page types
 │   ├── page_XXXX_caption.txt       # Document metadata
 │   └── page_XXXX_TOC.txt           # Table of contents
 └── chunks/              

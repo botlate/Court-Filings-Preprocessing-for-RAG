@@ -73,10 +73,11 @@ From classified pages, extract:
 #### Example: Caption page processing
 <img src="./images/page_0000_caption_bigger.png" width="600" alt="Caption page information extract" style="border:20px solid white;">
 
+
+The TOC is converted from visual layout to structured markdown. This hashtag hierarhy is later mapped onto headers in the pleading body pages, which allows them to be chunked by argument section instead of page or tokens.
+
 #### Example: TOC Extraction and Processing
 <img src="./images/TOC_map_bigger.png" width="700" alt="Extraction of structured TOC" style="border:10px solid white;"> 
-
-The TOC is converted from visual layout to structured markdown. This hashtag hierarhy is later mapped onto headers in the pleading body pages, which allows them to be chunked by argument section instead of page or tokens. 
 
 ### 4. Text Cleanup *(under construction)*
 - Footnotes are tagged [FN(3)]...footnote text...[FN(3)_end] and moved into the body of the text. This prevents 

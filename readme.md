@@ -26,15 +26,8 @@ Page_Type: Pleading body
 ==================================================
 [PDF_page_8_cont.]
 2. The Superior Court Sustained Defendants’ Demurrer Without Leave to Amend.
-Defendants then demurred on the same grounds. The Court sustained Defendants’
-demurrer on the basis of legislative immunity, referring back to its prior ruling denying injunctive
-relief. Mahler, Cal.App.5th at 100. The Court also provided additional grounds for
-dismissing Plaintiffs’ constitutional claim: that Plaintiffs did not oppose Defendants’ demurrer as
-to that claim, that there is no private right of action to enforce the relevant constitutional
-provision, and that the complaint failed to adequately allege a violation of that provision.
-Plaintiffs appealed, but they limited their challenge to the trial court’s ruling on their
-FEHA claim. Plaintiffs expressly did “not challenge in this appeal the trial court’s ruling that
-there is no cause of action under Cal. Const., art. VI, § 6, (e).” Mahler v. Judicial Council of
+Defendants then demurred on the same grounds. The Court sustained Defendants’...
+...there is no cause of action under Cal. Const., art. VI, § 6, (e).” Mahler v. Judicial Council of
 Cal., Opening Brief, 2020 WL 1290458, at *17 n.8.
     </pre>
   </div>

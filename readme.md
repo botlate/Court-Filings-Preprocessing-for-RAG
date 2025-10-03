@@ -71,7 +71,7 @@ From classified pages, extract:
 - **TOC structure** - Section headings and hierarchy
 
 #### Example: Caption page processing
-<img src="./images/page_0000_caption_bigger.png" width="400" alt="Caption page information extract">
+<img src="./images/page_0000_caption_bigger.png" width="600" alt="Caption page information extract" style="border:20px solid white;">
 
 #### Example: TOC Extraction and Processing
 <img src="./images/TOC_map_bigger.png" width="600" alt="Extraction of structured TOC">

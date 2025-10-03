@@ -238,7 +238,7 @@ Without contextual tagging, the statement "defendant was required to timely proc
 1. An allegation of duty in a negligence claim (relief: monetary damages)
 2. An allegation of ministerial duty (relief: writ of mandate ordering action)
 
-If it's negligence against a government entity, there may be immunity. If plaintiff isn't also making a mandate claim for that same act, and the government is immune for negligence, the argument might be dead. The same text, completely different legal significance.
+If it's negligence against a government entity, there may be immunity. If plaintiff isn't also making a mandate claim for that same act, and the government is immune for negligence, the argument might be dead. Same text, varying legal significance.
 
 ### Design Principles
 - Use AI for non-discretionary classification only

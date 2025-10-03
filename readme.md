@@ -6,28 +6,29 @@ Pre-processes litigation filings into contextually tagged chunks for attorney us
 ## Objective
 Pre-processes litigation filings into contextually tagged chunks for attorney use in a RAG repository.
 
-<!-- Begin: Page image (L) + Chunk 5997_006 text (R) -->
-<div style="display:flex; align-items:flex-start; gap:12px; margin:12px 0; flex-wrap:wrap;">
+## Objective
+Pre-processes litigation filings into contextually tagged chunks for attorney use in a RAG repository.
 
-  <!-- Left: Page image -->
-  <div style="flex:0 0 auto;">
-    <img src="./images/chunk_small_example.png" width="360" alt="Page image preview">
-  </div>
+<table style="border: none; border-collapse: collapse;">
+  <tr>
+    <td style="width: 360px; vertical-align: top; padding: 0 12px 0 0;">
+      <img src="./images/chunk_small_example.png" width="360" alt="Page image preview" style="display: block;">
+    </td>
 
-  <!-- Right: Text box with chunk content -->
-  <div style="flex:1 1 0; min-width:50px; max-width:40ch; border:1px solid #bbb; padding:2px; background:#fdfdfd; box-sizing:border-box; overflow:auto;">
-    <strong>Chunk 5997_006</strong>
-    <pre style="white-space:pre-wrap; word-break:break-word; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size:0.5em; line-height:1; margin-top:2px;">
+    <td style="vertical-align: top; padding: 0;">
+      <div style="max-width:40ch; border:1px solid #bbb; padding:2px; background:#fdfdfd; box-sizing:border-box; overflow:auto;">
+        <strong>Chunk 5997_006</strong>
+        <pre style="white-space:pre-wrap; word-break:break-word; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size:0.5em; line-height:1; margin-top:2px;">
 Document_ID: 5997
 Chunk_ID: 006
 Document_Title: DEFENDANTS’ MEMORANDUM OF POINTS
-AND AUTHORITIES IN SUPPORT OF 
+AND AUTHORITIES IN SUPPORT OF 
 DEMURRERS TO SECOND AMENDED COMPLAINT
 Filing_Party: Defendants
 Filing_Date: 11/22/2021
-Section_Path: BACKGROUND / B. Challenges 
-to Plaintiffs’ First Amended Complaint 
-/ 2. The Superior Court Sustained Defendants’ 
+Section_Path: BACKGROUND / B. Challenges 
+to Plaintiffs’ First Amended Complaint 
+/ 2. The Superior Court Sustained Defendants’ 
 Demurrer Without Leave to Amend
 PDF_pages: [8]
 Page_Type: Pleading body
@@ -37,16 +38,16 @@ Page_Type: Pleading body
 Demurrer Without Leave to Amend.
 Defendants then demurred on the same grounds.
 The Court sustained Defendants’...
-        [*text ommitted for length*]
+          [*text ommitted for length*]
 ...there is no cause of action under
-Cal. Const., art. VI, § 6, (e).” Mahler v. 
+Cal. Const., art. VI, § 6, (e).” Mahler v. 
 Judicial Council of Cal., Opening Brief,
 2020 WL 1290458, at *17 n.8.
-    </pre>
-  </div>
-
-</div>
-<!-- End: Page image (L) + Chunk 5997_006 text (R) -->
+        </pre>
+      </div>
+    </td>
+  </tr>
+</table>
 
 
 ## Purpose

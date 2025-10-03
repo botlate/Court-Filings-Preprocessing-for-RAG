@@ -3,12 +3,6 @@
 ## Objective
 Pre-processes litigation filings into contextually tagged chunks for attorney use in a RAG repository.
 
-## Objective
-Pre-processes litigation filings into contextually tagged chunks for attorney use in a RAG repository.
-
-## Objective
-Pre-processes litigation filings into contextually tagged chunks for attorney use in a RAG repository.
-
 <table style="border: none; border-collapse: collapse;">
   <tr>
     <td style="width: 360px; vertical-align: top; padding: 0 12px 0 0;">

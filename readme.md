@@ -6,7 +6,7 @@ Pre-processes litigation filings into contextually tagged chunks for attorney us
 ---
 
 ### Objective - Chunk Example
-<img src="./images/page_to_chunk_01.png" width="600" alt="Page image preview">
+<img src="./images/page_to_chunk_01.png" width="700" alt="Page image preview">
 
 ---
 

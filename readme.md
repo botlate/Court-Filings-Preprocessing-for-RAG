@@ -183,7 +183,6 @@ python pipeline.py
 python pipeline.py --update-mode --csv-type output
 ```
 
-### Scripts
 
 # Legal Document Processing Pipeline
 

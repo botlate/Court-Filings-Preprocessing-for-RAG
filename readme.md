@@ -74,7 +74,7 @@ From classified pages, extract:
 <img src="./images/page_0000_caption_bigger.png" width="500" alt="Caption page information extract" style="border:20px solid white;">
 
 #### Example: TOC Extraction and Processing
-<img src="./images/TOC_map_bigger.png" width="500" alt="Extraction of structured TOC" style="border:20px solid white;"> 
+<img src="./images/TOC_map_bigger.png" width="700" alt="Extraction of structured TOC" style="border:10px solid white;"> 
 
 The TOC is converted from visual layout to structured markdown. This hashtag hierarhy is later mapped onto headers in the pleading body pages, which allows them to be chunked by argument section instead of page or tokens. 
 

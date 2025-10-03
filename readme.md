@@ -14,7 +14,7 @@ Pre-processes litigation filings into contextually tagged chunks for attorney us
   <!-- Right: Text box with chunk content -->
   <div style="flex:1 1 0; min-width:150px; max-width:52ch; border:1px solid #bbb; padding:6px; background:#fdfdfd; box-sizing:border-box; overflow:auto;">
     <strong>Chunk 5997_006</strong>
-    <pre style="white-space:pre-wrap; word-break:break-word; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size:0.5em; line-height:1; margin-top:6px;">
+    <pre style="white-space:pre-wrap; word-break:break-word; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size:0.5em; line-height:1; margin-top:2px;">
 Document_ID: 5997
 Chunk_ID: 006
 Document_Title: DEFENDANTS’ MEMORANDUM OF POINTS AND AUTHORITIES IN SUPPORT OF 

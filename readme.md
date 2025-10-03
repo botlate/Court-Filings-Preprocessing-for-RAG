@@ -37,7 +37,7 @@ This system extracts and embeds in each chunk the minimum background knowledge a
 
 ### 1. PDF Decomposition
 
-<img src="./images/pdf_split_2.png" width="500" alt="Step 1: PDF decomposition showing creation of text files, metadata, and PNG folders">
+<img src="./images/pdf_split_2.png" width="500" alt="Step 1: PDF decomposition showing creation of text files, metadata, and PNG folders" style="border:20px solid white;">
 
 - **Input**: PDF litigation filings
 - **Process**: PyMuPDF extraction at 300 DPI (or other local PDF tools like Acrobat, ABBYY)
@@ -71,10 +71,10 @@ From classified pages, extract:
 - **TOC structure** - Section headings and hierarchy
 
 #### Example: Caption page processing
-<img src="./images/page_0000_caption_bigger.png" width="600" alt="Caption page information extract" style="border:20px solid white;">
+<img src="./images/page_0000_caption_bigger.png" width="500" alt="Caption page information extract" style="border:20px solid white;">
 
 #### Example: TOC Extraction and Processing
-<img src="./images/TOC_map_bigger.png" width="600" alt="Extraction of structured TOC" style="border:20px solid white;"> 
+<img src="./images/TOC_map_bigger.png" width="500" alt="Extraction of structured TOC" style="border:20px solid white;"> 
 
 The TOC is converted from visual layout to structured markdown. This hashtag hierarhy is later mapped onto headers in the pleading body pages, which allows them to be chunked by argument section instead of page or tokens. 
 

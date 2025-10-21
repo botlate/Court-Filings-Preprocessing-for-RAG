@@ -227,7 +227,7 @@ This pipeline is functional but actively being refined. Contributions and bug re
 ### Index Card Analogy
 Think of a RAG database as a big box of index cards. Each card is a chunk of text, and a robot—a retrieval algorithm—compiles a small stack of cards most similar to the user's query and passes those to the AI. The robot itself is not an AI; it's dumb. It doesn't really understand the universe of chunks and can't make sense of each chunk in relation to every other chunk. In fact, it doesn't even know whether two chunks are from the same document.
 
-### The Indispensible Categories of Context
+### Picking Essential Categories to Contextualize a Chunk
 Legal arguments are nested and referential. Two chunks can look nearly identical in meaning but differ entirely in significance depending on their location in the corpus, the arguments parties have advanced, and the litigation's trajectory.
 
 Consider: Defendant's motion summarizes plaintiff's fifth cause of action as alleged in the third amended complaint. This should not be used to understand what the fifth cause of action actually asserts, only what the defendant claims it asserts (or fails to). 

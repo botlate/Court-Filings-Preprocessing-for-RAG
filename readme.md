@@ -250,4 +250,35 @@ One could never draft a brief with a box of document snippets and a robot that c
 ---
 
 ## License
-[Add license information]
+MIT License with NLJ-500 Exclusion
+Copyright (c) 2025 Rye Murphy
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+1. Attribution.
+   The above copyright notice and this permission notice shall be included
+   in all copies or substantial portions of the Software.
+
+2. NLJ-500 Exclusion.
+   The rights granted in this License do NOT extend to:
+     (a) any law firm listed in the National Law Journal (NLJ) 500 rankings
+         for the year of use or any prior year, or
+     (b) any employee, partner, shareholder, associate, contractor, or agent
+         of such a firm using the Software within the scope of their work or
+         for the benefit of such a firm.
+
+   These firms and individuals are prohibited from using, copying, modifying,
+   merging, publishing, distributing, sublicensing, or selling the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

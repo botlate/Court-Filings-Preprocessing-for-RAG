@@ -270,10 +270,10 @@ furnished to do so, subject to the following conditions:
          for the year of use or any prior year, or
      (b) any employee, partner, shareholder, associate, contractor, or agent
          of such a firm using the Software within the scope of their work or
-         for the benefit of such a firm.
+         for the benefit of the firm.
 
-   These firms and individuals are prohibited from using, copying, modifying,
-   merging, publishing, distributing, sublicensing, or selling the Software.
+    These firms and individuals are prohibited from using, copying, modifying,
+   merging, publishing, distributing, sublicensing, or selling the Software without my permission. Just email of you want to use. This carveout of the the MIT license is not intended to prevent big firm lawyers from experimenting or trying out the Software for personal use. If you're going to use it for work billed at $700/hr you can throw a dollar on my hat.
 
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,

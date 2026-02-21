@@ -18,6 +18,7 @@ def get_script_path(script_id: str, base_dir: str) -> str:
         "data_synchronizer": "23_data_synchronizer.py",
         "toc_chunker": "30_toc_chunker.py",
         "semantic_chunker": "31_semantic_chunker.py",
+        "ocr_text_importer": "12_ocr_text_importer.py",
         "vision_enhancer": "40_vision_enhancer.py",
         
         # Backward compatibility (deprecated) - will remove after transition
@@ -57,22 +58,45 @@ def main():
                        help="CSV file to update (for update mode)")
     
     # Folder renaming control arguments
-    parser.add_argument("--skip-folder-rename", action="store_true", 
+    parser.add_argument("--skip-folder-rename", action="store_true",
                        help="Skip folder renaming step entirely")
     parser.add_argument("--force-folder-rename", action="store_true",
                        help="Force folder renaming even if already completed")
     parser.add_argument("--rename-confirmation", choices=["auto", "prompt", "skip"],
                        default="prompt", help="How to handle folder rename confirmation")
-    
+
+    # External OCR and GUI arguments
+    parser.add_argument("--external-ocr", metavar="FOLDER",
+                       help="Path to folder with external OCR text files (skips PyMuPDF text extraction)")
+    parser.add_argument("--skip-text-extract", action="store_true",
+                       help="Skip PyMuPDF text extraction (auto-set when --external-ocr is used)")
+    parser.add_argument("--gui", action="store_true",
+                       help="Launch the GUI instead of CLI mode")
+
     args = parser.parse_args()
+
+    # Launch GUI if requested
+    if args.gui:
+        from pipeline_gui import main as gui_main
+        gui_main()
+        return
+
+    # Auto-set skip-text-extract when external-ocr is provided
+    if args.external_ocr:
+        args.skip_text_extract = True
     
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    
+    project_dir = os.path.dirname(base_dir)  # One level up from code/
+
+    # Ensure code/ is on PYTHONPATH so subprocess scripts can import sibling modules
+    env = os.environ.copy()
+    env["PYTHONPATH"] = base_dir + os.pathsep + env.get("PYTHONPATH", "")
+
     # If in update mode, run the update pipeline instead
     if args.update_mode:
         update_script = os.path.join(base_dir, "update_pipeline.py")
         update_args = [
-            "--doc-files-path", os.path.join(base_dir, "doc_files"),
+            "--doc-files-path", os.path.join(project_dir, "doc_files"),
             "--csv-type", args.csv_type
         ]
         
@@ -85,8 +109,8 @@ def main():
 
     # Configuration for the pipeline.
     extractor_config = {
-        "input_folder": os.path.join(base_dir, "PDFs"),
-        "output_folder": os.path.join(base_dir, "doc_files"),
+        "input_folder": os.path.join(project_dir, "PDFs"),
+        "output_folder": os.path.join(project_dir, "doc_files"),
         "script": get_script_path("pdf_extractor", base_dir),
         "timeout": 600  # seconds for the extractor script
     }
@@ -136,10 +160,18 @@ def main():
     # Run the extractor only if output folder doesn't exist or is empty.
     output_folder = extractor_config["output_folder"]
     if not os.path.exists(output_folder) or not os.listdir(output_folder):
-        print("Running PDF extractor script...")
+        extractor_cmd = [
+            "python", extractor_config["script"],
+            extractor_config["input_folder"], extractor_config["output_folder"]
+        ]
+        if args.skip_text_extract:
+            extractor_cmd.append("--png-only")
+            print("Running PDF extractor script (PNG only)...")
+        else:
+            print("Running PDF extractor script...")
         result1 = subprocess.run(
-            ["python", extractor_config["script"], extractor_config["input_folder"], extractor_config["output_folder"]],
-            timeout=extractor_config["timeout"]
+            extractor_cmd,
+            timeout=extractor_config["timeout"], env=env
         )
         if result1.returncode != 0:
             print("Error in PDF extractor script:")
@@ -148,6 +180,23 @@ def main():
         print("PDF extractor script finished.")
     else:
         print("Extraction already completed. Skipping PDF extractor step.")
+
+    # ---- External OCR Text Import Step ----
+    if args.external_ocr:
+        ocr_import_script = get_script_path("ocr_text_importer", base_dir)
+        print(f"Importing external OCR text from: {args.external_ocr}")
+        try:
+            result_ocr_import = subprocess.run(
+                ["python", ocr_import_script, args.external_ocr, output_folder],
+                timeout=300, env=env
+            )
+            if result_ocr_import.returncode != 0:
+                print("Error in OCR text import script")
+                sys.exit(1)
+            print("External OCR text import finished.")
+        except subprocess.TimeoutExpired:
+            print("OCR text import timed out.")
+            sys.exit(1)
 
     # Validate output folder.
     if not os.path.exists(output_folder):
@@ -184,7 +233,7 @@ def main():
         try:
             result2 = subprocess.run(
                 ["python", classifier_config["script"], classifier_config["input_folder"]],
-                timeout=classifier_config["timeout"]
+                timeout=classifier_config["timeout"], env=env
             )
             if result2.returncode != 0:
                 print("Error in OpenAI classifier script:")
@@ -221,7 +270,7 @@ def main():
         try:
             result3 = subprocess.run(
                 ["python", toc_fix_config["script"], toc_fix_config["input_folder"]],
-                timeout=toc_fix_config["timeout"]
+                timeout=toc_fix_config["timeout"], env=env
             )
             if result3.returncode != 0:
                 print("Error in TOC fix script:")
@@ -261,7 +310,7 @@ def main():
         try:
             result4 = subprocess.run(
                 ["python", csv_creation_config["script"], csv_creation_config["input_folder"]],
-                timeout=csv_creation_config["timeout"]
+                timeout=csv_creation_config["timeout"], env=env
             )
             if result4.returncode != 0:
                 print("Error in CSV creation script:")
@@ -367,7 +416,7 @@ def main():
         print("Running folder rename script...")
         try:
             cmd = get_folder_rename_command(args, folder_rename_config, extractor_config)
-            result5 = subprocess.run(cmd, timeout=folder_rename_config["timeout"])
+            result5 = subprocess.run(cmd, timeout=folder_rename_config["timeout"], env=env)
             
             if result5.returncode != 0:
                 print("Error in folder rename script:")
@@ -441,11 +490,11 @@ def main():
         print(f"Running TOC chunker on {len(toc_docs)} documents...")
         try:
             result_toc = subprocess.run(
-                ["python", toc_chunker_config["script"], 
+                ["python", toc_chunker_config["script"],
                  "--in-root", toc_chunker_config["input_folder"],
                  "--out-root", toc_chunker_config["input_folder"],
                  "--write-chunk-files"],
-                timeout=toc_chunker_config["timeout"]
+                timeout=toc_chunker_config["timeout"], env=env
             )
             if result_toc.returncode != 0:
                 print("Error in TOC chunker script:")
@@ -518,7 +567,7 @@ print(f"Created {{len(chunks)}} chunks for {doc}")
                 
                 result_non_toc = subprocess.run(
                     ["python", temp_script_path],
-                    timeout=300  # 5 minutes per document
+                    timeout=300, env=env  # 5 minutes per document
                 )
                 
                 # Clean up temp script

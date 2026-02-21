@@ -32,7 +32,7 @@ OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 if not OPENAI_API_KEY:
     raise ValueError("Please set the OPENAI_API_KEY environment variable")
 
-MODEL_NAME = "gpt-5-mini"
+MODEL_NAME = "gpt-4o-mini"
 
 # Document classification categories
 CATEGORIES = [

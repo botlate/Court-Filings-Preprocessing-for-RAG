@@ -41,12 +41,24 @@ def remove_line_numbers(text):
     
     return '\n'.join(cleaned_lines)
 
-def extract_pdf_pages(pdf_path, output_base_dir):
+def sanitize_folder_name(name):
+    """
+    Sanitize folder name for Windows filesystem compatibility.
+    Replaces problematic characters like trailing dots, ellipsis, etc.
+    """
+    # Replace sequences of 3+ dots (ellipsis) with underscore
+    name = re.sub(r'\.{3,}', '_', name)
+    # Remove trailing dots/spaces (Windows doesn't allow them in folder names)
+    name = name.rstrip('. ')
+    return name
+
+def extract_pdf_pages(pdf_path, output_base_dir, png_only=False):
     """
     Extract each page of a PDF as both PNG image and cleaned text.
+    If png_only=True, skip text extraction (for use with external OCR).
     """
     # Get PDF filename without extension for folder name
-    pdf_name = Path(pdf_path).stem
+    pdf_name = sanitize_folder_name(Path(pdf_path).stem)
     
     # Create output directories
     pdf_output_dir = Path(output_base_dir) / pdf_name
@@ -54,7 +66,8 @@ def extract_pdf_pages(pdf_path, output_base_dir):
     text_dir = pdf_output_dir / "text_pages"
     
     png_dir.mkdir(parents=True, exist_ok=True)
-    text_dir.mkdir(parents=True, exist_ok=True)
+    if not png_only:
+        text_dir.mkdir(parents=True, exist_ok=True)
     
     print(f"Processing: {pdf_name}", flush=True)
     
@@ -85,33 +98,36 @@ def extract_pdf_pages(pdf_path, output_base_dir):
             except Exception as e:
                 print(f"  Error saving image for page {page_num + 1}: {e}")
             
-            # Extract and clean text
-            try:
-                # Extract text
-                text = page.get_text()
-                
-                # Remove line numbers
-                cleaned_text = remove_line_numbers(text)
-                
-                # Save text file
-                text_path = text_dir / f"{page_filename}.txt"
-                with open(text_path, "w", encoding="utf-8") as f:
-                    f.write(cleaned_text)
-                
-                print(f"  Saved text: {page_filename}.txt", flush=True)
-                
-            except Exception as e:
-                print(f"  Error saving text for page {page_num + 1}: {e}")
+            # Extract and clean text (skip if png_only mode)
+            if not png_only:
+                try:
+                    # Extract text
+                    text = page.get_text()
+
+                    # Remove line numbers
+                    cleaned_text = remove_line_numbers(text)
+
+                    # Save text file
+                    text_path = text_dir / f"{page_filename}.txt"
+                    with open(text_path, "w", encoding="utf-8") as f:
+                        f.write(cleaned_text)
+
+                    print(f"  Saved text: {page_filename}.txt", flush=True)
+
+                except Exception as e:
+                    print(f"  Error saving text for page {page_num + 1}: {e}")
         
+        page_count = len(doc)
         doc.close()
-        print(f"Completed: {pdf_name} ({len(doc)} pages)", flush=True)
+        print(f"Completed: {pdf_name} ({page_count} pages)", flush=True)
         
     except Exception as e:
         print(f"Error processing {pdf_path}: {e}", flush=True)
 
-def process_pdf_folder(input_folder, output_folder):
+def process_pdf_folder(input_folder, output_folder, png_only=False):
     """
     Process all PDFs in the input folder.
+    If png_only=True, only extract PNG images (skip text extraction).
     """
     input_path = Path(input_folder)
     output_path = Path(output_folder)
@@ -134,9 +150,12 @@ def process_pdf_folder(input_folder, output_folder):
     print(f"Found {len(pdf_files)} PDF files", flush=True)
     print("-" * 50, flush=True)
     
+    if png_only:
+        print("PNG-only mode: skipping text extraction", flush=True)
+
     for pdf_file in pdf_files:
         with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
-            future = executor.submit(extract_pdf_pages, pdf_file, output_path)
+            future = executor.submit(extract_pdf_pages, pdf_file, output_path, png_only)
             try:
                 future.result(timeout=300)
             except concurrent.futures.TimeoutError:
@@ -146,8 +165,21 @@ def process_pdf_folder(input_folder, output_folder):
     print("All PDFs processed!", flush=True)
 
 if __name__ == "__main__":
-    import os
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    INPUT_FOLDER = os.path.join(BASE_DIR, "PDFs")
-    OUTPUT_FOLDER = os.path.join(BASE_DIR, "doc_files")
-    process_pdf_folder(INPUT_FOLDER, OUTPUT_FOLDER)
+    import sys
+    import argparse as _argparse
+
+    parser = _argparse.ArgumentParser(description="Extract PDF pages as PNG images and text")
+    parser.add_argument("input_folder", nargs="?", default=None, help="Input folder with PDFs")
+    parser.add_argument("output_folder", nargs="?", default=None, help="Output folder for extracted files")
+    parser.add_argument("--png-only", action="store_true", help="Only extract PNG images, skip text extraction")
+    _args = parser.parse_args()
+
+    if _args.input_folder and _args.output_folder:
+        INPUT_FOLDER = _args.input_folder
+        OUTPUT_FOLDER = _args.output_folder
+    else:
+        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+        project_dir = os.path.dirname(BASE_DIR)
+        INPUT_FOLDER = _args.input_folder or os.path.join(project_dir, "PDFs")
+        OUTPUT_FOLDER = _args.output_folder or os.path.join(project_dir, "doc_files")
+    process_pdf_folder(INPUT_FOLDER, OUTPUT_FOLDER, png_only=_args.png_only)

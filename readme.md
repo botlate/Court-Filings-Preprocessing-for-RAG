@@ -171,18 +171,57 @@ Chunks are outputted in JSON containers:
 ```bash
 git clone [repository]
 cd legal-rag-pipeline
-pip install -r requirements.txt
+pip install -r code/requirements.txt
+```
+
+### Dependencies
+```
+PyMuPDF>=1.24.0       # PDF extraction (fitz)
+openai>=1.0.0         # Vision classification & folder naming
+tiktoken>=0.5.0       # Token counting for semantic chunker
+python-dateutil>=2.8.0 # Flexible date parsing
+Pillow>=10.0.0        # Image processing
+```
+
+### Project Layout
+```
+RAG_prepro/
+├── PDFs/                  # Input: place PDF filings here
+├── doc_files/             # Output: pipeline creates this
+│   ├── [Document_Name]/
+│   │   ├── PNG/           # Page images (300 DPI)
+│   │   ├── text_pages/    # OCR'd text (page_XXXX.txt)
+│   │   ├── metadata/      # Classification CSV, caption, TOC, chunks.json
+│   │   └── chunks/        # Individual chunk files (DDDD_CCC.txt)
+│   └── output.csv         # Document-level metadata summary
+├── code/                  # All pipeline scripts
+│   ├── 00_pipeline_orchestrator.py
+│   ├── ...
+│   └── requirements.txt
+└── readme.md
 ```
 
 ### Basic Usage
 ```bash
-# Place PDFs in the PDFs/ folder, then:
-python pipeline.py
+# Place PDFs in the PDFs/ folder, then run orchestrator from code/:
+cd code
+python 00_pipeline_orchestrator.py
+
+# Or run individual steps:
+python 10_pdf_extractor.py ../PDFs ../doc_files
+PYTHONPATH=. python 11_document_classifier.py ../doc_files
+python 20_toc_formatter.py ../doc_files
+python 21_metadata_aggregator.py ../doc_files
+PYTHONPATH=. python 30_toc_chunker.py --in-root ../doc_files --out-root ../doc_files --write-chunk-files
 
 # For CSV updates only:
-python pipeline.py --update-mode --csv-type output
+python 00_pipeline_orchestrator.py --update-mode --csv-type output
 ```
 
+### OCR Note
+PyMuPDF's built-in text extraction works for digitally-created PDFs but may produce poor results for scanned documents. For scanned filings, extract OCR text externally (e.g., Adobe Acrobat, ABBYY) and place them in each document's `text_pages/` folder as `page_0001.txt`, `page_0002.txt`, etc. The pipeline will skip PDF text extraction if `doc_files/` already exists.
+
+---
 
 # Legal Document Processing Pipeline
 
@@ -193,9 +232,9 @@ This repository contains a suite of Python scripts designed to process, classify
 | Script | Purpose | Notes |
 | --- | --- | --- |
 | `00_pipeline_orchestrator.py` | Main orchestrator - runs the entire pipeline. | Entry point. |
-| `01_prompt_repository.py` | Stores all prompts for classification and vision models. | Required by the classifier. |
-| `10_pdf_extractor.py` | Extracts each page of a PDF as both a PNG image and cleaned text. | First step in the pipeline. |
-| `11_document_classifier.py` | Classifies pages of documents using GPT-5 vision. | This is the most critical step. |
+| `01_prompt_repository.py` | Stores all prompts for classification and vision models. | Required by the classifier (imported via `prompts.py` alias). |
+| `10_pdf_extractor.py` | Extracts each page of a PDF as both a PNG image and cleaned text. | First step in the pipeline. Accepts CLI args or defaults to `../PDFs`. |
+| `11_document_classifier.py` | Classifies pages of documents using GPT-4o-mini vision. | This is the most critical step. |
 | `20_toc_formatter.py` | Cleans and structures the Table of Contents for later chunking. | This is essential for documents with a Table of Contents. |
 | `21_metadata_aggregator.py` | Pulls together file info for tracking and creates `output.csv`. | |
 | `22_folder_standardizer.py` | Standardizes folder names for legal documents and creates `standardized.csv`. | Won't change folder names if unnecessary |
@@ -205,6 +244,7 @@ This repository contains a suite of Python scripts designed to process, classify
 | `99_ocr_enhancer.py` | Uses PaddleOCR or AI vision to ID footnotes and headers/footers. | TBD - will incorporate at earlier stage |
 | `id_system.py` | Manages document and chunk IDs across the pipeline. | |
 | `metadata_extractor.py` | Extracts metadata from various sources like caption files and classification CSV files. | |
+| `prompts.py` | Import alias for `01_prompt_repository.py`. | Required because Python can't import modules starting with digits. |
 
 ---
 
@@ -214,6 +254,7 @@ This repository contains a suite of Python scripts designed to process, classify
 - **Cross-page content**: Headers/text breaking across pages may be split
 - **Nested exhibits**: Exhibits containing other exhibits need manual handling
 - **No error recovery**: Currently no automated correction after misclassification
+- **OCR quality**: PyMuPDF text extraction is unreliable for scanned PDFs; external OCR recommended for scanned filings
 
 ---
 

@@ -299,9 +299,9 @@ def create_summary_csv(target_directory=None):
         with open(output_csv_path, 'w', newline='', encoding='utf-8') as csvfile:
             writer = csv.writer(csvfile)
             writer.writerows(csv_rows)
-        print(f"\n✅ Successfully created CSV file: {output_csv_path}")
+        print(f"\nSuccessfully created CSV file: {output_csv_path}")
     except IOError as e:
-        print(f"\n❌ ERROR: Could not write to CSV file. Please check permissions. Error: {e}")
+        print(f"\nERROR: Could not write to CSV file. Please check permissions. Error: {e}")
 
 if __name__ == "__main__":
     import sys

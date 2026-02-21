@@ -86,7 +86,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         base_dir = sys.argv[1]
     else:
-        base_dir = (r"C:\PDF_raw\doc_files")
+        base_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "doc_files")
     
     # Verify directory exists
     if not os.path.exists(base_dir):
